@@ -136,7 +136,6 @@ module Sinatra
     end
 
     def finish
-      raise "HEREERERERERE!!!!!!!"
       result = body
 
       if drop_content_info?
@@ -161,6 +160,7 @@ module Sinatra
     private
 
     def calculate_content_length?
+      return false
       headers["Content-Type"] and not headers["Content-Length"] and Array === body
     end
 
