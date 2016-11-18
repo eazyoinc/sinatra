@@ -136,6 +136,7 @@ module Sinatra
     end
 
     def finish
+      raise "HEREERERERERE!!!!!!!"
       result = body
 
       if drop_content_info?
